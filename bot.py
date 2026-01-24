@@ -113,6 +113,7 @@ async def game_control(client, message: Message):
     if cmd == "/startdice":
         dice_active = True
         await message.reply("¡El juego de dados ya está activo! Envía un emoji de 🎲 para participar")
+        await app.send_dice(chat_id=message.chat.id,emoji="🎲")
     elif cmd == "/stopdice":
         dice_active = False
         dice_attempts.clear()
@@ -121,6 +122,7 @@ async def game_control(client, message: Message):
     elif cmd == "/startdarts":
         darts_active = True
         await message.reply("¡El juego de dardos ya está activo! Envía un emoji de 🎯 para participar.")
+        await app.send_dice(chat_id=message.chat.id,emoji="🎯")
     elif cmd == "/stopdarts":
         darts_active = False
         darts_attempts.clear()
@@ -130,6 +132,7 @@ async def game_control(client, message: Message):
     elif cmd == "/startslots":
         slots_active = True
         await message.reply("¡La máquina tragamonedas ya está activa! Envía un emoji de 🎰 para participar.")
+        await app.send_dice(chat_id=message.chat.id,emoji="🎰")        
     elif cmd == "/stopslots":
         slots_active = False
         slots_attempts.clear()
@@ -138,6 +141,7 @@ async def game_control(client, message: Message):
     elif cmd == "/startbasket":
         basketball_active = True
         await message.reply("¡El juego de baloncesto ya está activo! Envía un emoji de 🏀 para participar.")
+        await app.send_dice(chat_id=message.chat.id,emoji="🏀")
     elif cmd == "/stopbasket":
         basketball_active = False
         basketball_attempts.clear()
@@ -147,6 +151,7 @@ async def game_control(client, message: Message):
     elif cmd == "/startfoot":
         football_active = True
         await message.reply("¡El juego de fútbol ya está activo! Envía un emoji de ⚽️ para participar.")
+        await app.send_dice(chat_id=message.chat.id,emoji="⚽️")
     elif cmd == "/stopfoot":
         football_active = False
         football_attempts.clear()
