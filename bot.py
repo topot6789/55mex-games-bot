@@ -292,7 +292,7 @@ async def detect_mini_game(client, message: Message):
             score = message.dice.value
 
             if score == 6:  
-                prize = "₱20"
+                prize = "20MXN"
                 msg = f"¡¡Felicitaciones!! @{user} gana {prize} ¡Foto perfecta!\n\n"
                 f"Envíe una captura de pantalla de su depósito de 100MXN hoy junto con su ID de jugador para reclamar su premio.\n\n"
                 f"NOTA: EL DEPÓSITO DEBE REALIZARSE ANTES DE HABER JUGADO EL JUEGO, NO DESPUÉS DE JUGARLO"
@@ -303,7 +303,7 @@ async def detect_mini_game(client, message: Message):
                     msg += "\n¡Ganaste en tu PRIMER lanzamiento, segunda oportunidad eliminada!"
 
             elif score > 1:  # Hit the board
-                prize = "₱5"
+                prize = "5MXN"
                 msg = "f¡Buen golpe! @{user} gana {prize}**\n\nEnvíe una captura de pantalla de su depósito de 100MXN hoy junto con su ID de jugador para reclamar su premio.\n\nNOTA: EL DEPÓSITO DEBE REALIZARSE ANTES DE HABER JUGADO EL JUEGO, NO DESPUÉS DE JUGARLO"
 
                 daily_winners.add(user_id)
@@ -338,7 +338,7 @@ async def detect_mini_game(client, message: Message):
             msg = (
                 f"🎰 **Slot Machine** 🎰\n"
                 f"**{status}**\n"
-                f"Reward: ₱{payout}\n\n"
+                f"Reward: {payout}MXN\n\n"
                 "Envíe una captura de pantalla de su depósito de 300MXN hoy junto con su ID de jugador para reclamar su premio.\n\n"
                 "NOTA: EL DEPÓSITO DEBE REALIZARSE ANTES DE HABER JUGADO EL JUEGO, NO DESPUÉS DE JUGARLO"
             )
